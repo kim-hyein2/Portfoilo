@@ -6,5 +6,6 @@
     "explorer.decorations.colors": false,
     "explorer.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
-    "workbench.editor.decorations.badges": false
+    "workbench.editor.decorations.badges": false,
+    "liveServer.settings.port": 5501
 }
