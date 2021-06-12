@@ -98,12 +98,21 @@ p {
 
 /* Navbar */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: var(--color-pink);
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
   }
+
+  #navbar.navbar--dark {
+    background-color: var(--color-pink);
+    padding: 8px;
+    opacity: 0.9;
+    }
 
 .navbar__menu {
     display: flex;
@@ -145,6 +154,7 @@ p {
 #home {
     background: url('imgs/home-background.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -452,7 +462,7 @@ p {
 .contact__links {
     font-size: var(--font-large);
     margin: 24px 0;
-    transition: all --animation-duration ease-in;
+    transition: all var(--animation-duration) ease-in;
 }
 
 .contact__links i:hover {
