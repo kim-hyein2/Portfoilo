@@ -106,6 +106,7 @@ p {
     padding: 16px;
     background-color: transparent;
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
   }
 
   #navbar.navbar--dark {
@@ -134,6 +135,7 @@ p {
 .navbar__menu__item.active {
     border: 1px solid white;
     border: 1px solid var(--color-white);
+    border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
@@ -143,7 +145,7 @@ p {
 
   .navbar__toggle-btn {
       position: absolute;
-      top: 24px;
+      top: 11px;
       right: 32px;
       font-size: 24px;
       color: var(--color-white);
@@ -178,6 +180,10 @@ p {
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+    background-color: var(--color-orange);
 }
 
 /* Section common */
