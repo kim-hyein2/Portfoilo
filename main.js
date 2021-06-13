@@ -20,7 +20,18 @@
         if(link == null) { 
             return; //조기리턴
         }
-        const scrollTo = document.querySelector(link);
-        scrollTo.scrollIntoView({behavior: 'smooth'});
+        scrollIntoView(link );
     });
+
+
+    // Handle click on "contact me" button on home
+    const contact = document.querySelector('.home__contact');
+    contact.addEventListener('click', ()=> {
+        scrollIntoView('#contact');
+    });
+
+    function scrollIntoView(selector ) {
+        const scrollTo = document.querySelector(selector );
+        scrollTo.scrollIntoView({behavior: 'smooth'});
+    }
 }
