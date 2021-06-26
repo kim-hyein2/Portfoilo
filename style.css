@@ -185,6 +185,7 @@ p {
 /* Section common */
 .section {
     padding: 50px;
+    padding-top: 62px;
     text-align: center;
     margin: auto;
 }
@@ -234,6 +235,7 @@ p {
 .job {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .job__description {
@@ -257,6 +259,10 @@ p {
 /* Skill */
 #skills {
     background-color: var(--color-yellow);
+}
+
+#skills p {
+    margin: 10px 0 25px;
 }
 
 .skillset {
@@ -303,6 +309,10 @@ p {
     background-color: var(--color-grey);
 }
 
+.tools__list li {
+    margin-bottom: 5px;
+}
+
 .tools, .etc {
     padding: 20px;
 }
@@ -316,6 +326,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -338,9 +349,9 @@ p {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-out;
 }
@@ -469,7 +480,7 @@ p {
 }
 
 .contact__title {
-    margin: 32px 0;
+    margin: 20px 0;
 }
 
 .contact__links {
@@ -506,9 +517,28 @@ p {
  
 /* for below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+        /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    }
+
+    .section {
+        padding: 16px;
+        padding-top: 35px;
+    }
+
+    .category__btn {
+        margin: 2.5px;
+    }
+
     .navbar__toggle-btn {
         display: block;
-        margin-top: 8px;
+        top: 13px;
+        right: 20px;
     }
 
     #navbar {
@@ -534,6 +564,8 @@ p {
 
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major {
@@ -544,12 +576,44 @@ p {
         flex-direction: column;
     }
 
+    .work__categories {
+        margin: 20px 40px;
+    }
+
     .project {
         flex-grow: 1;
     }
+    
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
 
     .testimonial__avatar {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial__avatar:nth-child(odd),
+    .testimonial__avatar:nth-child(even) {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .testimonial__speach-bubble {
+        order: 1;
+    }
+
+    .contact__title {
+        margin: 0px;
+    }
+
+    .arrow-up {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        bottom: 20px;
+        right: 20px;
     }
 }
